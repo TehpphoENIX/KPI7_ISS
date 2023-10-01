@@ -1,0 +1,9 @@
+#!/bin/sh
+
+A=`head -c 4096 /dev/random | tr -cd '[:digit:]' | cut -c -50`
+B=`head -c 4096 /dev/random | tr -cd '[:digit:]' | cut -c -50`
+
+echo A = $A
+echo B = $B
+
+python3 calc.py $A $1 $B
